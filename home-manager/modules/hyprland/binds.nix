@@ -12,7 +12,6 @@
       "$mainMod, R, exec, $menu"
       "$mainMod, P, pseudo,"
       "$mainMod, J, togglesplit,"
-      "$mainMod, O, exec, playerctl play-pause"
 
       # Move focus with mainMod + arrow keys
       "$mainMod, left, movefocus, l"
@@ -55,6 +54,11 @@
       # Move/resize windows with mainMod + LMB/RMB and dragging
       "$mainMod, mouse:272, movewindow"
       "$mainMod, mouse:273, resizeactive"
+
+      # Music player
+      "$mainMod, o, exec, playerctl play-pause"
+      "$mainMod, BRACKETRIGHT, exec, playerctl next"
+      "$mainMod, BRACKETLEFT, exec, playerctl previous"
     ];
   };
 }
