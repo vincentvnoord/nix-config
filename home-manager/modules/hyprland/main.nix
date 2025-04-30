@@ -28,6 +28,8 @@
         "LIBVA_DRIVER_NAME,nvidia"
       ];
 
+      "$mainMod" = "ALT"; # Sets "Windows" key as main modifier
+
       monitor = [ "DP-1,1920x1080@239.96,0x0,1" "DP-3,1920x1080,1920x0,1" ];
 
       ###################
@@ -193,7 +195,6 @@
       ###################
 
       # See https://wiki.hyprland.org/Configuring/Keywords/
-      "$mainMod" = "SUPER"; # Sets "Windows" key as main modifier
 
       bindel = [
         # Laptop multimedia keys for volume and LCD brightn

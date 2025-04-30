@@ -10,6 +10,8 @@
     ./nixos/modules
   ];
 
+  environment.systemPackages = [ pkgs.home-manager ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -71,37 +73,6 @@
     videoDrivers = [ "nvidia" ];
   };
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    alacritty
-    neovim
-    git
-    wayland
-    waybar
-    xwayland
-    swaybg
-    hyprland
-    dconf
-    polkit
-    firefox
-    kitty
-    dolphin
-    home-manager
-    vscode
-    wl-clipboard
-    hyprpaper
-    nodejs_22
-    pamixer
-    spotify
-    discord
-    steam-run
-    playerctl
-    flameshot
-    nixfmt
-    wofi
-  ];
-
   hardware.nvidia.open = true;
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -130,5 +101,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
-
 }
