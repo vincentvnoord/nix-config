@@ -25,10 +25,14 @@
 		"WLR_DPI_SCALE,1"
 		"ELECTRON_ENABLE_SCALE_FACTOR,1"
 		"ELECTRON_OZONE_PLATFORM_HINT,auto"
+        "GBM_BACKEND,nvidia-drm"
+        "__GLX_VENDOR_LIBRARY_NAME,nvidia"
+        "LIBVA_DRIVER_NAME,nvidia"
 	  ];
 	  
 	    monitor = [
-			",1920x1080@60,auto,1"
+			"DP-2,1920x1080@239.96,0x0,1"
+			"DP-1,1920x1080@60,1920x0,1"
 		];
 
 
@@ -199,7 +203,7 @@ gestures = {
 # See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more
 device = {
     name = "epic-mouse-v1";
-    sensitivity = -0.5;
+    sensitivity = -0.6;
 };
 
 ###################

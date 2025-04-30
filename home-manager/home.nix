@@ -7,5 +7,6 @@
 
 	imports = [
 		./modules
+		../nixos/modules
 	];
 }

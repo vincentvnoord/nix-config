@@ -91,6 +91,7 @@
 	wl-clipboard
     hyprpaper
     nodejs_22
+    pamixer
   ];
 
   hardware.nvidia.open = true;
