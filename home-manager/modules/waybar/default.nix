@@ -11,7 +11,6 @@
         modules-center = [ "hyprland/window" ];
         modules-right = [
           "hyprland/language"
-          "custom/weather"
           "pulseaudio"
           "battery"
           "clock"
@@ -45,13 +44,6 @@
           format-he = "🇮🇱";
           min-length = 5;
           tooltip = false;
-        };
-
-        "custom/weather" = {
-          format = " {} ";
-          exec = "curl -s 'wttr.in/Tashkent?format=%c%t'";
-          interval = 300;
-          class = "weather";
         };
 
         "pulseaudio" = {
