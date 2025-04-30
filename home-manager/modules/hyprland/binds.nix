@@ -14,10 +14,10 @@
       "$mainMod, J, togglesplit,"
 
       # Move focus with mainMod + arrow keys
-      "$mainMod, left, movefocus, l"
-      "$mainMod, right, movefocus, r"
-      "$mainMod, up, movefocus, u"
-      "$mainMod, down, movefocus, d"
+      "$mainMod, a, movefocus, l"
+      "$mainMod, d, movefocus, r"
+      "$mainMod, w, movefocus, u"
+      "$mainMod, s, movefocus, d"
 
       # Switch workspaces with mainMod + [0-9]
       "$mainMod, 1, workspace, 1"

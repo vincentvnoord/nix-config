@@ -78,6 +78,7 @@
     neovim
     git
     wayland
+    waybar
     xwayland
     swaybg
     hyprland
@@ -98,6 +99,7 @@
     playerctl
     flameshot
     nixfmt
+    wofi
   ];
 
   hardware.nvidia.open = true;
