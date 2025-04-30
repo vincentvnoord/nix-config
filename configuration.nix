@@ -5,16 +5,16 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./nixos/modules
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -55,7 +55,7 @@
     isNormalUser = true;
     description = "Vincent van Noord";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages
@@ -74,24 +74,30 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  	alacritty
-  	neovim
-  	git
-  	wayland
-  	xwayland
+    alacritty
+    neovim
+    git
+    wayland
+    xwayland
     swaybg
-  	hyprland
-  	dconf
-  	polkit
-  	firefox
-  	kitty
-  	dolphin
-  	home-manager
-	vscode
-	wl-clipboard
+    hyprland
+    dconf
+    polkit
+    firefox
+    kitty
+    dolphin
+    home-manager
+    vscode
+    wl-clipboard
     hyprpaper
     nodejs_22
     pamixer
+    spotify
+    discord
+    steam-run
+    playerctl
+    flameshot
+    nixfmt
   ];
 
   hardware.nvidia.open = true;
