@@ -12,6 +12,7 @@
       "$mainMod, R, exec, $menu"
       "$mainMod, P, pseudo,"
       "$mainMod, J, togglesplit,"
+      "$mainMod, F, fullscreen"
 
       # Move focus with mainMod + arrow keys
       "$mainMod, a, movefocus, l"

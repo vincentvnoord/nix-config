@@ -14,6 +14,10 @@
     php82
     php82Packages.composer
     docker
+    glibc
+
+    # GUI Tools
+    drawio
 
 
     wayland
