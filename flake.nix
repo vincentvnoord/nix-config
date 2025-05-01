@@ -9,25 +9,49 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         system = system;
         config.allowUnfree = true;
       };
+      homeStateVersion = "24.11";
+      user = "vincent";
+      hosts = [
+        {
+          hostname = "desktop";
+          stateVersion = "24.11";
+        }
+        {
+          hostname = "laptop";
+          stateVersion = "24.11";
+        }
+      ];
+
+      makeSystem = { hostname, stateVersion }:
+        nixpkgs.lib.nixosSystem {
+          system = system;
+          specialArgs = { inherit inputs stateVersion hostname user; };
+
+          modules = [ ./hosts/${hostname}/configuration.nix ];
+        };
     in {
-      # NixOS Configuration
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = [ ./configuration.nix ];
-      };
+      nixosConfigurations = nixpkgs.lib.foldl' (configs: host:
+        configs // {
+          "${host.hostname}" =
+            makeSystem { inherit (host) hostname stateVersion; };
+        }) { } hosts;
 
       # Home Manager Configuration
-      homeConfigurations.vincent = home-manager.lib.homeManagerConfiguration {
-        pkgs = pkgs;
-        modules = [ ./home-manager/home.nix ];
-      };
+      homeConfigurations = nixpkgs.lib.foldl' (configs: host:
+        configs // {
+          "${host.hostname}" = home-manager.lib.homeManagerConfiguration {
+            pkgs = pkgs;
+            extraSpecialArgs = { inherit inputs homeStateVersion user; };
+            modules = [ ./home-manager/home.nix ];
+          };
+        }) { } hosts;
 
       # DevShell
       devShells.x86_64-linux.default = pkgs.mkShell {

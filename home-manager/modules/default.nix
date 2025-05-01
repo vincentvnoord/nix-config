@@ -1,7 +1,8 @@
 {
   imports = [
     ./waybar
-    ./bash.nix
     ./hyprland
+    ./bash.nix
+    ./zsh.nix
   ];
 }

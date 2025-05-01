@@ -4,6 +4,7 @@
   home.packages = with pkgs; [
     # Terminal
     alacritty
+    zsh
 
     # CLI tools
     git
@@ -18,7 +19,6 @@
 
     # GUI Tools
     drawio
-
 
     wayland
     waybar
