@@ -10,7 +10,7 @@
     git
 
     # Programming tools
-    nixfmt
+    nixfmt-rfc-style
     neovim
     php82
     php82Packages.composer

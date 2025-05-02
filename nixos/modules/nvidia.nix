@@ -1,0 +1,1 @@
+{ hardware.nvidia.open = true; }

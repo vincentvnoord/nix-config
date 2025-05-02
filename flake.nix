@@ -5,11 +5,14 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
-      inputs = { nixpkgs.follows = "nixpkgs"; };
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }@inputs:
+  outputs =
+    { nixpkgs, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -29,39 +32,42 @@
         }
       ];
 
-      makeSystem = { hostname, stateVersion }:
+      makeSystem =
+        { hostname, stateVersion }:
         nixpkgs.lib.nixosSystem {
           system = system;
-          specialArgs = { inherit inputs stateVersion hostname user; };
+          specialArgs = {
+            inherit
+              inputs
+              stateVersion
+              hostname
+              user
+              ;
+          };
 
           modules = [
             ./hosts/${hostname}/configuration.nix
             home-manager.nixosModules.home-manager
           ];
         };
-    in {
-      nixosConfigurations = nixpkgs.lib.foldl' (configs: host:
-        configs // {
-          "${host.hostname}" =
-            makeSystem { inherit (host) hostname stateVersion; };
-        }) { } hosts;
-
-      # Home Manager Configuration
-      #     homeConfigurations = nixpkgs.lib.foldl' (configs: host:
-      #       configs // {
-      #         "${host.hostname}" = home-manager.lib.homeManagerConfiguration {
-      #           pkgs = pkgs;
-      #           extraSpecialArgs = {
-      #             inherit inputs homeStateVersion user;
-      #             inherit (host) hostname;
-      #           };
-      #           modules = [ ./home-manager/home.nix ];
-      #         };
-      #       }) { } hosts;
+    in
+    {
+      nixosConfigurations = nixpkgs.lib.foldl' (
+        configs: host:
+        configs
+        // {
+          "${host.hostname}" = makeSystem { inherit (host) hostname stateVersion; };
+        }
+      ) { } hosts;
 
       # DevShell
       devShells.x86_64-linux.default = pkgs.mkShell {
-        nativeBuildInputs = with pkgs; [ nodejs steam-run cypress firefox ];
+        nativeBuildInputs = with pkgs; [
+          nodejs
+          steam-run
+          cypress
+          firefox
+        ];
 
         shellHook = ''
             			export CYPRESS_INSTALL_BINARY=0

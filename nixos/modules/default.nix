@@ -6,5 +6,10 @@
     ./locale.nix
     ./networking.nix
     ./packages.nix
+    ./user.nix
+    ./nix.nix
+    ./hyprland.nix
+    ./nvidia.nix
+    ./home-manager.nix
   ];
 }
