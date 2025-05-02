@@ -6,6 +6,5 @@
     ./locale.nix
     ./networking.nix
     ./packages.nix
-    ./shells.nix
   ];
 }

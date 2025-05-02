@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, hostname, ... }: {
   home = {
     username = "vincent";
     homeDirectory = "/home/vincent";
@@ -13,6 +13,8 @@
     };
   };
 
-  imports = [ ./modules ./home-packages.nix ];
-
+  imports = [
+    (import ./modules { inherit config pkgs hostname; })
+    (import ./home-packages.nix { inherit pkgs; })
+  ];
 }

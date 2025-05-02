@@ -34,7 +34,10 @@
           system = system;
           specialArgs = { inherit inputs stateVersion hostname user; };
 
-          modules = [ ./hosts/${hostname}/configuration.nix ];
+          modules = [
+            ./hosts/${hostname}/configuration.nix
+            home-manager.nixosModules.home-manager
+          ];
         };
     in {
       nixosConfigurations = nixpkgs.lib.foldl' (configs: host:
@@ -44,14 +47,17 @@
         }) { } hosts;
 
       # Home Manager Configuration
-      homeConfigurations = nixpkgs.lib.foldl' (configs: host:
-        configs // {
-          "${host.hostname}" = home-manager.lib.homeManagerConfiguration {
-            pkgs = pkgs;
-            extraSpecialArgs = { inherit inputs homeStateVersion user; };
-            modules = [ ./home-manager/home.nix ];
-          };
-        }) { } hosts;
+      #     homeConfigurations = nixpkgs.lib.foldl' (configs: host:
+      #       configs // {
+      #         "${host.hostname}" = home-manager.lib.homeManagerConfiguration {
+      #           pkgs = pkgs;
+      #           extraSpecialArgs = {
+      #             inherit inputs homeStateVersion user;
+      #             inherit (host) hostname;
+      #           };
+      #           modules = [ ./home-manager/home.nix ];
+      #         };
+      #       }) { } hosts;
 
       # DevShell
       devShells.x86_64-linux.default = pkgs.mkShell {

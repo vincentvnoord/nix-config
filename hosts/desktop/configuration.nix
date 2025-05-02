@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, stateVersion, hostname, ... }:
+{ config, pkgs, stateVersion, hostname, inputs, user, ... }:
 
 {
   imports = [ # Include the results of the hardware scan.
@@ -10,27 +10,28 @@
     ../../nixos/modules
   ];
 
-  networking.hostName = hostname; # Define your hostname.
+  networking.hostName = builtins.trace "DEBUG: Hostname is ${hostname}" hostname;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
-  programs.zsh.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.vincent = {
+  users.users.${user} = {
     isNormalUser = true;
     description = "Vincent van Noord";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [ ];
     shell = pkgs.zsh;
+  };
+
+  home-manager.users.${user} = {
+    home.stateVersion = stateVersion;
+
+    # Import your home.nix configuration and pass hostname
+    imports = [
+      (import ../../home-manager/home.nix { inherit config pkgs hostname; })
+    ];
   };
 
   # Allow unfree packages

@@ -1,8 +1,8 @@
-{
+{ config, pkgs, hostname, ... }: {
   imports = [
     ./waybar
     ./hyprland
     ./bash.nix
-    ./zsh.nix
+    (import ./zsh.nix { inherit config pkgs hostname; })
   ];
 }

@@ -12,8 +12,7 @@
 
     shellAliases = let flakeDir = "~/nix-config";
     in {
-      rebuild = "sudo nixos-rebuild switch --flake ${flakeDir}.#${hostname}";
-      hms = "home-manager switch --flake ${flakeDir}.#${hostname} -b backup";
+      rebuild = "sudo nixos-rebuild switch --flake ${flakeDir}#${hostname}";
       gs = "git status";
     };
   };
