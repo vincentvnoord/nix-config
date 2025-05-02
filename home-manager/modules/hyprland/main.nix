@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  hostname,
+  ...
+}:
 
 {
   wayland.windowManager.hyprland = {
@@ -6,7 +11,9 @@
     xwayland.enable = true;
 
     settings = {
-      xwayland = { force_zero_scaling = true; };
+      xwayland = {
+        force_zero_scaling = true;
+      };
 
       env = [
         "XDG_CURRENT_DESKTOP,Hyprland"
@@ -30,7 +37,16 @@
 
       "$mainMod" = "ALT"; # Sets "Windows" key as main modifier
 
-      monitor = [ "DP-1,1920x1080@239.96,0x0,1" "DP-3,1920x1080,1920x0,1" ];
+      monitor =
+        if hostname == "desktop" then
+          [
+            "DP-1,1920x1080@239.96,0x0,1"
+            "DP-3,1920x1080,1920x0,1"
+          ]
+        else if hostname == "laptop" then
+          [ "eDP-1,1920x1080,0x0,1" ]
+        else
+          [ ];
 
       ###################
       ### MY PROGRAMS ###
@@ -157,7 +173,9 @@
       };
 
       # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-      master = { new_status = "master"; };
+      master = {
+        new_status = "master";
+      };
 
       # https://wiki.hyprland.org/Configuring/Variables/#misc
       misc = {
@@ -177,11 +195,15 @@
 
         sensitivity = 0; # -1.0 - 1.0, 0 means no modification.
 
-        touchpad = { natural_scroll = false; };
+        touchpad = {
+          natural_scroll = false;
+        };
       };
 
       # https://wiki.hyprland.org/Configuring/Variables/#gestures
-      gestures = { workspace_swipe = false; };
+      gestures = {
+        workspace_swipe = false;
+      };
 
       # Example per-device config
       # See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more

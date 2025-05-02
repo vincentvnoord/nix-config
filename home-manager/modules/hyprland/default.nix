@@ -1,6 +1,6 @@
-{
+{ config, pkgs, hostname, ...}: {
   imports = [
-    ./main.nix
+    (import ./main.nix { inherit config pkgs hostname; })
     ./hyprpaper.nix
     ./binds.nix
   ];
