@@ -9,6 +9,8 @@
   stylix = {
     targets = {
       firefox.enable = true;
+      kitty.enable = true;
+
       waybar.enable = false;
       hyprland.enable = false;
     };

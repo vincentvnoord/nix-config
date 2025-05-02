@@ -10,5 +10,4 @@
       extraGroups = [ "networkmanager" "wheel" ];
     };
   };
-
 }

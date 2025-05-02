@@ -2,9 +2,9 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = [ "~/Pictures/wallpapers/fuji.jpg" ];
+      preload = [ "../stylix/wallpapers/fuji.jpg" ];
 
-      wallpaper = [ ", ~/Pictures/wallpapers/fuji.jpg" ];
+      wallpaper = [ ", ../stylix/wallpapers/fuji.jpg" ];
     };
   };
 }
