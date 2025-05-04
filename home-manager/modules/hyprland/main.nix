@@ -5,6 +5,10 @@
   ...
 }:
 
+let
+  monitor1 = "DP-2,1920x1080@239.96,0x0,1";
+  monitor2 = "DP-1,1920x1080,1920x0,1";
+in
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -13,6 +17,15 @@
     settings = {
       xwayland = {
         force_zero_scaling = true;
+      };
+
+      cursor = {
+        no_hardware_cursors = true;
+        min_refresh_rate = 240;
+      };
+
+      misc = {
+        vrr = 1;
       };
 
       env = [
@@ -40,13 +53,18 @@
       monitor =
         if hostname == "desktop" then
           [
-            "DP-1,1920x1080@239.96,0x0,1"
-            "DP-3,1920x1080,1920x0,1"
+            monitor1
+            monitor2
           ]
         else if hostname == "laptop" then
           [ "eDP-1,1920x1080,0x0,1" ]
         else
           [ ];
+
+      workspace = [
+        "1, monitor:${monitor1}"
+        "2, monitor:${monitor2}"
+      ];
 
       ###################
       ### MY PROGRAMS ###
@@ -55,7 +73,7 @@
       # See https://wiki.hyprland.org/Configuring/Keywords/
 
       # Set programs that you use
-      "$terminal" = "kitty";
+      "$terminal" = "alacritty";
       "$fileManager" = "dolphin";
       "$menu" = "wofi --show drun";
 
@@ -70,7 +88,10 @@
       # exec-once = nm-applet &
       # exec-once = waybar & hyprpaper & firefox
 
-      exec-once = [ "hyprpaper" ];
+      exec-once = [
+        "hyprpaper"
+        "waybar &"
+      ];
 
       #############################
       ### ENVIRONMENT VARIABLES ###
@@ -252,7 +273,7 @@
         "suppressevent maximize, class:.*"
         # Fix some dragging issues with XWayland
         "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
-        "opacity 0.85 0.75,class:^(kitty)$"
+        "opacity 0.85 0.75,class:^(alacritty)$"
       ];
 
     };

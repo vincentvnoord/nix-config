@@ -16,7 +16,7 @@
     };
 
     enable = true;
-    image = ./wallpapers/fuji.jpg; # change to your actual wallpaper path
+    image = ./wallpapers/wallpaper.jpg; # change to your actual wallpaper path
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-storm.yaml";
 

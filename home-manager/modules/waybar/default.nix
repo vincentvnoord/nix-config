@@ -11,7 +11,7 @@
       {
         output =
           if hostname == "desktop" then
-            [ "DP-1" ]
+            [ "DP-2" ]
           else if hostname == "laptop" then
             [ "eDP-1" ]
           else
