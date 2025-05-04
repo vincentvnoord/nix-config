@@ -6,8 +6,8 @@
 }:
 
 let
-  monitor1 = "DP-2,1920x1080@239.96,0x0,1";
-  monitor2 = "DP-1,1920x1080,1920x0,1";
+  monitor1 = "DP-1,1920x1080@239.96,0x0,1";
+  monitor2 = "DP-3,1920x1080,1920x0,1";
 in
 {
   wayland.windowManager.hyprland = {
