@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
@@ -8,6 +9,7 @@
 
     # CLI tools
     git
+    neofetch
 
     # Programming tools
     nixfmt-rfc-style
