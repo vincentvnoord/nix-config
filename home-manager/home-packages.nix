@@ -3,6 +3,9 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+    # System programs
+    networkmanagerapplet
+
     # Terminal
     alacritty
     zsh

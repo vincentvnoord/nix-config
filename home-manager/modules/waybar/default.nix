@@ -24,7 +24,7 @@
         modules-center = [ "clock" ];
         modules-right = [
           "battery"
-          "network"
+          "tray"
           "pulseaudio"
         ];
       }

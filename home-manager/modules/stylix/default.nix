@@ -13,6 +13,8 @@
 
       waybar.enable = false;
       hyprland.enable = false;
+
+      gtk.enable = true;
     };
 
     enable = true;

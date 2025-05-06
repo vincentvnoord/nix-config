@@ -92,6 +92,7 @@ in
         "hyprpaper"
         "waybar &"
         "hyprctl dispatch workspace 1; $terminal -e neofetch"
+        "hyprctl dispatch workspace 2; spotify & discord"
       ];
 
       #############################
