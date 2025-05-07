@@ -27,6 +27,22 @@
           "tray"
           "pulseaudio"
         ];
+
+        clock = {
+          format = "{:%d/%m/%Y - %H:%M}";
+          icon = "🕒";
+          icon-font = "JetBrainsMono Nerd Font";
+          text-font = "Inter";
+        };
+
+        pulseaudio = {
+          format = " {volume}%";
+          format-muted = "{icon} Muted";
+          icon = "";
+          max-volume = 100;
+          icon-font = "JetBrainsMono Nerd Font";
+          text-font = "Inter";
+        };
       }
     ];
 

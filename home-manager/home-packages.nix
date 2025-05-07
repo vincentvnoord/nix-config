@@ -5,6 +5,7 @@
   home.packages = with pkgs; [
     # System programs
     networkmanagerapplet
+    pavucontrol
 
     # Terminal
     alacritty
