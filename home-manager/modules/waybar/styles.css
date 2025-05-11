@@ -23,7 +23,6 @@
 /* Workspace Buttons */
 #workspaces button label {
     border-radius: 8px;
-    padding: 0 10px;
 }
 
 #workspaces button.active label {
