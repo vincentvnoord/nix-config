@@ -48,5 +48,6 @@
     playerctl
     flameshot
     wofi
+    postman
   ];
 }
