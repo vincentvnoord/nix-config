@@ -26,6 +26,11 @@
     # GUI Tools
     drawio
 
+    # Browsers
+    firefox
+    google-chrome
+    brave
+
     wayland
     waybar
     xwayland
@@ -33,7 +38,6 @@
     hyprland
     dconf
     polkit
-    firefox
     kitty
     dolphin
     home-manager

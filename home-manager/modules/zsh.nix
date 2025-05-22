@@ -1,4 +1,10 @@
-{ config, pkgs, hostname, ... }: {
+{
+  config,
+  pkgs,
+  hostname,
+  ...
+}:
+{
   programs.zsh = {
     enable = true;
     # Enable syntax highlighting
@@ -10,10 +16,20 @@
       export PROMPT='%n@%m:%~%# '
     '';
 
-    shellAliases = let flakeDir = "~/nix-config";
-    in {
-      rebuild = "sudo nixos-rebuild switch --flake ${flakeDir}#${hostname}";
-      gs = "git status";
-    };
+    shellAliases =
+      let
+        flakeDir = "~/nix-config";
+      in
+      {
+        rebuild = "sudo nixos-rebuild switch --flake ${flakeDir}#${hostname}";
+        gs = "git status";
+        ga = "git add";
+        gc = "git commit";
+        gcm = "git commit -m";
+        gco = "git checkout";
+        gcb = "git checkout -b";
+        gpl = "git pull";
+        gf = "git fetch";
+      };
   };
 }
