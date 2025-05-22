@@ -37,7 +37,7 @@
     kitty
     dolphin
     home-manager
-    vscode
+    vscode.fhs
     wl-clipboard
     hyprpaper
     nodejs_22

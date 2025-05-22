@@ -60,6 +60,12 @@
       "$mainMod, o, exec, playerctl play-pause"
       "$mainMod, BRACKETRIGHT, exec, playerctl next"
       "$mainMod, BRACKETLEFT, exec, playerctl previous"
+
+      # Resize bindings
+      "$mainMod SHIFT, H, resizeactive, -20 0" # Resize left
+      "$mainMod SHIFT, L, resizeactive, 20 0" # Resize right
+      "$mainMod SHIFT, K, resizeactive, 0 -20" # Resize up
+      "$mainMod SHIFT, J, resizeactive, 0 20" # Resize down
     ];
   };
 }
