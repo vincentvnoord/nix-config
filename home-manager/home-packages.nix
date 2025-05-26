@@ -39,7 +39,6 @@
     dconf
     polkit
     kitty
-    dolphin
     home-manager
     vscode.fhs
     wl-clipboard

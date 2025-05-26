@@ -19,6 +19,7 @@
           pkgs
           hostname
           inputs
+          stateVersion
           ;
       })
     ];

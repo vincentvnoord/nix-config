@@ -29,6 +29,7 @@
         gco = "git checkout";
         gcb = "git checkout -b";
         gpl = "git pull";
+        gpu = "git push";
         gf = "git fetch";
       };
   };

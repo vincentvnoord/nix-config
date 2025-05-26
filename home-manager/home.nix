@@ -3,13 +3,14 @@
   config,
   pkgs,
   hostname,
+  stateVersion,
   ...
 }:
 {
   home = {
     username = "vincent";
     homeDirectory = "/home/vincent";
-    stateVersion = "24.11";
+    stateVersion = stateVersion;
   };
 
   imports = [

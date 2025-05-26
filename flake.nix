@@ -2,16 +2,16 @@
   description = "My system configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs = {
         nixpkgs.follows = "nixpkgs";
       };
     };
 
     stylix = {
-      url = "github:danth/stylix/release-24.11";
+      url = "github:danth/stylix/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -24,16 +24,16 @@
         system = system;
         config.allowUnfree = true;
       };
-      homeStateVersion = "24.11";
+      homeStateVersion = "25.05";
       user = "vincent";
       hosts = [
         {
           hostname = "desktop";
-          stateVersion = "24.11";
+          stateVersion = "25.05";
         }
         {
           hostname = "laptop";
-          stateVersion = "24.11";
+          stateVersion = "25.05";
         }
       ];
 
@@ -52,7 +52,10 @@
 
           modules = [
             ./hosts/${hostname}/configuration.nix
-            home-manager.nixosModules.home-manager
+            {
+              imports = [ home-manager.nixosModules.home-manager ];
+              home-manager.users.${user}.home.stateVersion = stateVersion;
+            }
           ];
         };
     in
