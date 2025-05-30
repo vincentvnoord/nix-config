@@ -30,10 +30,13 @@
     typescript-language-server
     intelephense
     vscode-langservers-extracted
+    emmet-ls
+    tailwindcss-language-server
 
     # Linters
     stylua
     prettierd
+    nodePackages.eslint
 
     # GUI Tools
     drawio
