@@ -1,6 +1,6 @@
 { inputs, pkgs, ... }:
 {
-  imports = [ inputs.stylix.homeManagerModules.stylix ];
+  imports = [ inputs.stylix.homeModules.stylix ];
 
   home.packages = with pkgs; [
     noto-fonts-emoji
@@ -10,6 +10,7 @@
     targets = {
       firefox.enable = true;
       kitty.enable = true;
+      alacritty.enable = true;
 
       waybar.enable = false;
       hyprland.enable = false;

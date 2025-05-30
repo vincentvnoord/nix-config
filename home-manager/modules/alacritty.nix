@@ -8,6 +8,13 @@
           y = 10;
         };
       };
+
+      font = {
+        normal = {
+         family = "FiraCode Nerd Font Mono";
+        style = "Regular";
+      };
+    };
     };
   };
 }

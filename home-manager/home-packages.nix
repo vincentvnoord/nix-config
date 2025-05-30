@@ -14,6 +14,8 @@
     # CLI tools
     git
     neofetch
+    ripgrep
+    gcc
 
     # Programming tools
     nixfmt-rfc-style
@@ -22,6 +24,16 @@
     php82Packages.composer
     docker
     glibc
+
+    # LSP's
+    lua-language-server
+    typescript-language-server
+    intelephense
+    vscode-langservers-extracted
+
+    # Linters
+    stylua
+    prettierd
 
     # GUI Tools
     drawio
