@@ -16,6 +16,7 @@
     neofetch
     ripgrep
     gcc
+    tmuxifier
 
     # Programming tools
     nixfmt-rfc-style
@@ -24,6 +25,7 @@
     php82Packages.composer
     docker
     glibc
+    code-cursor
 
     # LSP's
     lua-language-server
@@ -40,6 +42,7 @@
 
     # GUI Tools
     drawio
+    dbeaver-bin
 
     # Browsers
     firefox

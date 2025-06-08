@@ -12,8 +12,9 @@
     # Enable autosuggestions
     autosuggestion.enable = true;
     # Set custom Zsh prompt (optional)
-    initExtra = ''
+    initContent = ''
       export PROMPT='%n@%m:%~%# '
+      eval "$(tmuxifier init -)"
     '';
 
     shellAliases =

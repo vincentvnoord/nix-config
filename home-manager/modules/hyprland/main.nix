@@ -44,8 +44,10 @@ in
         "ELECTRON_ENABLE_SCALE_FACTOR,1"
         "ELECTRON_OZONE_PLATFORM_HINT,auto"
         "GBM_BACKEND,nvidia-drm"
+        "NVD_BACKEND,direct"
         "__GLX_VENDOR_LIBRARY_NAME,nvidia"
         "LIBVA_DRIVER_NAME,nvidia"
+        "NIXOS_OZONE_WL,1"
       ];
 
       "$mainMod" = "ALT"; # Sets "Windows" key as main modifier
