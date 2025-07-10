@@ -15,6 +15,7 @@
     initContent = ''
       export PROMPT='%n@%m:%~%# '
       eval "$(tmuxifier init -)"
+      eval "$(direnv hook zsh)"   # or zsh if you use that
     '';
 
     shellAliases =
@@ -32,6 +33,8 @@
         gpl = "git pull";
         gpu = "git push";
         gf = "git fetch";
+
+        tf = "tmuxifier";
       };
   };
 }

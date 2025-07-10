@@ -11,12 +11,16 @@
     alacritty
     zsh
 
+    grim
+    slurp
+
     # CLI tools
     git
     neofetch
     ripgrep
     gcc
     tmuxifier
+    postgresql
 
     # Programming tools
     nixfmt-rfc-style
@@ -26,6 +30,9 @@
     docker
     glibc
     code-cursor
+    air
+    dbmate
+    direnv
 
     # LSP's
     lua-language-server
@@ -43,11 +50,19 @@
     # GUI Tools
     drawio
     dbeaver-bin
+    obsidian
+    darktable
+    gparted
 
     # Browsers
     firefox
     google-chrome
     brave
+
+    # Runtimes
+    nodejs_24
+    go
+    gopls
 
     wayland
     waybar
@@ -61,7 +76,6 @@
     vscode.fhs
     wl-clipboard
     hyprpaper
-    nodejs_22
     pamixer
     spotify
     discord

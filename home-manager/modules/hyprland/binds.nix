@@ -66,6 +66,9 @@
       "$mainMod SHIFT, L, resizeactive, 20 0" # Resize right
       "$mainMod SHIFT, K, resizeactive, 0 -20" # Resize up
       "$mainMod SHIFT, J, resizeactive, 0 20" # Resize down
+
+      # Screenshotting selection
+      "$mainMod, S, exec, grim -g \"\$(slurp)\" - | wl-copy --type image/png"
     ];
   };
 }

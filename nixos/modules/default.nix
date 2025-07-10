@@ -11,5 +11,6 @@
     ./hyprland.nix
     ./nvidia.nix
     ./home-manager.nix
+    ./postgres.nix
   ];
 }
