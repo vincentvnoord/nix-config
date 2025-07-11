@@ -11,6 +11,7 @@
       firefox.enable = true;
       kitty.enable = true;
       alacritty.enable = true;
+      tmux.enable = true;
 
       waybar.enable = false;
       hyprland.enable = false;
