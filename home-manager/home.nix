@@ -22,6 +22,11 @@
         inputs
         ;
     })
-    (import ./home-packages.nix { inherit pkgs; })
+    (import ./home-packages.nix { 
+      inherit 
+      pkgs
+      inputs
+      ; 
+    })
   ];
 }

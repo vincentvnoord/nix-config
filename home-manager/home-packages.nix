@@ -1,11 +1,14 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+    inputs.zen-browser.packages."x86_64-linux".default
+
     # System programs
     networkmanagerapplet
     pavucontrol
+    unzip
 
     # Terminal
     alacritty
@@ -33,6 +36,7 @@
     air
     dbmate
     direnv
+    eas-cli
 
     # LSP's
     lua-language-server
@@ -41,6 +45,7 @@
     vscode-langservers-extracted
     emmet-ls
     tailwindcss-language-server
+    csharp-ls
 
     # Linters
     stylua
@@ -63,6 +68,8 @@
     nodejs_24
     go
     gopls
+    dotnet-sdk_8
+    dotnet-runtime_8
 
     wayland
     waybar

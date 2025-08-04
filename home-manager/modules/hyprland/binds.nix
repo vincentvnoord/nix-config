@@ -5,7 +5,7 @@
     bind = [
       "$mainMod, C, killactive,"
       "$mainMod, Q, exec, $terminal"
-      "$mainMod, B, exec, firefox"
+      "$mainMod, B, exec, zen"
       "$mainMod, M, exit,"
       "$mainMod, E, exec, $fileManager"
       "$mainMod, V, togglefloating,"

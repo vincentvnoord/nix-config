@@ -12,5 +12,6 @@
     ./nvidia.nix
     ./home-manager.nix
     ./postgres.nix
+    ./nix-ld.nix
   ];
 }

@@ -16,6 +16,7 @@
       export PROMPT='%n@%m:%~%# '
       eval "$(tmuxifier init -)"
       eval "$(direnv hook zsh)"   # or zsh if you use that
+      export PATH="$PATH:/home/vincent/.dotnet/tools"
     '';
 
     shellAliases =
