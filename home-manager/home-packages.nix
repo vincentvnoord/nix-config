@@ -21,8 +21,8 @@
     git
     neofetch
     ripgrep
-    gcc
     tmuxifier
+    gcc
     postgresql
 
     # Programming tools
@@ -46,6 +46,7 @@
     emmet-ls
     tailwindcss-language-server
     csharp-ls
+    clang-tools
 
     # Linters
     stylua
@@ -58,6 +59,8 @@
     obsidian
     darktable
     gparted
+    obs-studio
+    vlc
 
     # Browsers
     firefox
@@ -68,8 +71,8 @@
     nodejs_24
     go
     gopls
-    dotnet-sdk_8
-    dotnet-runtime_8
+    dotnet-sdk_9
+    dotnet-runtime_9
 
     wayland
     waybar
