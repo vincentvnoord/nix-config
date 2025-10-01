@@ -29,7 +29,10 @@
       system = "x86_64-linux";
       pkgs = import nixpkgs {
         system = system;
-        config.allowUnfree = true;
+        config = {
+            allowUnfree = true;
+            permittedInsecurePackages = [ "dotnet-sdk-6.0.428" "dotnet-runtime-6.0.36" ];
+        };
       };
       homeStateVersion = "25.05";
       user = "vincent";
@@ -57,13 +60,16 @@
               ;
           };
 
-          modules = [
-            ./hosts/${hostname}/configuration.nix
-            {
+        modules = [
+          ./hosts/${hostname}/configuration.nix
+             {
               imports = [ home-manager.nixosModules.home-manager ];
-              home-manager.users.${user}.home.stateVersion = stateVersion;
-            }
-          ];
+
+            home-manager.users.${user} = {
+      home.stateVersion = stateVersion;
+    };
+  }
+];
         };
     in
     {

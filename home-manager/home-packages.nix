@@ -1,6 +1,7 @@
 { pkgs, inputs, ... }:
 {
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.permittedInsecurePackages = [ "dotnet-sdk-6.0.428" ];
 
   home.packages = with pkgs; [
     inputs.zen-browser.packages."x86_64-linux".default
@@ -73,6 +74,9 @@
     gopls
     dotnet-sdk_9
     dotnet-runtime_9
+
+    gphoto2 
+    ffmpeg 
 
     wayland
     waybar

@@ -13,5 +13,6 @@
     ./home-manager.nix
     ./postgres.nix
     ./nix-ld.nix
+    ./media.nix
   ];
 }
