@@ -20,7 +20,7 @@
     };
 
     enable = true;
-    image = ./wallpapers/wallpaper.jpg; # change to your actual wallpaper path
+    image = ./wallpapers/wallpaper.png; # change to your actual wallpaper path
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 

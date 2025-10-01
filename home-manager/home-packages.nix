@@ -25,6 +25,7 @@
     tmuxifier
     gcc
     postgresql
+    yazi
 
     # Programming tools
     nixfmt-rfc-style
