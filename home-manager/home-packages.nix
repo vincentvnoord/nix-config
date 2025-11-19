@@ -63,6 +63,7 @@
     gparted
     obs-studio
     vlc
+    libreoffice
 
     # Browsers
     firefox
@@ -99,5 +100,9 @@
     flameshot
     wofi
     postman
+
+    # C libs
+    raylib
+    pkg-config
   ];
 }

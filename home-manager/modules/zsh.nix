@@ -17,6 +17,7 @@
       eval "$(tmuxifier init -)"
       eval "$(direnv hook zsh)"   # or zsh if you use that
       export PATH="$PATH:/home/vincent/.dotnet/tools"
+      export PKG_CONFIG_PATH="$(nix path-info -r nixpkgs#raylib)/lib/pkgconfig"
     '';
 
     shellAliases =
