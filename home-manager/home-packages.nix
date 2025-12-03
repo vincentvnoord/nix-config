@@ -39,6 +39,7 @@
     dbmate
     direnv
     eas-cli
+    gnumake
 
     # LSP's
     lua-language-server

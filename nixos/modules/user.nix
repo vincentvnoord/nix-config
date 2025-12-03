@@ -1,6 +1,5 @@
 { pkgs, user, ... }: {
   programs.zsh.enable = true;
-  programs.zsh.loginShell = true;
 
   users = {
     defaultUserShell = pkgs.zsh;
