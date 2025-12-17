@@ -71,12 +71,14 @@
     google-chrome
     brave
 
-    # Runtimes
+    # Go
     nodejs_24
-    go
+    go_1_25
     gopls
-    dotnet-sdk_9
-    dotnet-runtime_9
+
+    # .NET
+    dotnet-sdk_8
+    dotnet-runtime_8
 
     gphoto2 
     ffmpeg 
