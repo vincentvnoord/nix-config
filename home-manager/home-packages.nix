@@ -10,6 +10,7 @@
     networkmanagerapplet
     pavucontrol
     unzip
+    apacheHttpd
 
     # Terminal
     alacritty
@@ -26,6 +27,9 @@
     gcc
     postgresql
     yazi
+    lazygit
+    cloc
+    starship
 
     # Programming tools
     nixfmt-rfc-style

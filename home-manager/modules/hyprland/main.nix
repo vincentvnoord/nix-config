@@ -20,7 +20,7 @@ in
       };
 
       cursor = {
-        no_hardware_cursors = true;
+        no_hardware_cursors = false;
         min_refresh_rate = 240;
       };
 

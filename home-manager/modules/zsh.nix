@@ -15,13 +15,18 @@
     initContent = ''
       export PROMPT='%n@%m:%~%# '
       eval "$(tmuxifier init -)"
-      eval "$(direnv hook zsh)"   # or zsh if you use that
+      eval "$(direnv hook zsh)"
+
+      bindkey -v
+      KEYTIMEOUT=1
 
       export GOPATH="$HOME/go"
       export PATH="$PATH:$GOPATH/bin"
 
       export PATH="$PATH:/home/vincent/.dotnet/tools"
       export PKG_CONFIG_PATH="$(nix path-info -r nixpkgs#raylib)/lib/pkgconfig"
+
+      eval "$(starship init zsh)"
     '';
 
     shellAliases =
