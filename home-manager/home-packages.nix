@@ -11,6 +11,7 @@
     pavucontrol
     unzip
     apacheHttpd
+    btop
 
     # Terminal
     alacritty
@@ -30,6 +31,7 @@
     lazygit
     cloc
     starship
+    lsof
 
     # Programming tools
     nixfmt-rfc-style
