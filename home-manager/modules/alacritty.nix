@@ -12,9 +12,10 @@
       font = {
         normal = {
          family = "FiraCode Nerd Font Mono";
-        style = "Regular";
+         style = "Regular";
+        };
       };
-    };
+
     };
   };
 }

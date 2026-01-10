@@ -32,7 +32,7 @@
           format = "{:%d/%m/%Y - %H:%M}";
           icon = "🕒";
           icon-font = "JetBrainsMono Nerd Font";
-          text-font = "Inter";
+          text-font = "JetBrainsMono Nerd Font";
         };
 
         pulseaudio = {
@@ -41,7 +41,7 @@
           icon = "";
           max-volume = 100;
           icon-font = "JetBrainsMono Nerd Font";
-          text-font = "Inter";
+          text-font = "JetBrainsMono Nerd Font";
         };
       }
     ];
