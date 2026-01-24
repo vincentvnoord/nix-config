@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0px;
-    font-family: "Inter";
+    font-family: "JetBrainsMono Nerd Font";
     font-size: 16px;
     min-height: 0;
     font-weight: normal;
@@ -16,23 +16,23 @@
 .modules-center,
 .modules-right {
     background-color: rgba(19, 21, 21, 0.43);
-    border-radius: 8px;
+    border-radius: 4px;
     margin: 5px 5px 0 5px;
 }
 
 /* Workspace Buttons */
 #workspaces button label {
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
 #workspaces button.active label {
     color: #1d2021;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
 #workspaces button.active {
-    background: #ffffff;
-    border-radius: 8px;
+    background: #f48c57;
+    border-radius: 4px;
 }
 
 #clock,
