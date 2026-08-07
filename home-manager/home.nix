@@ -4,6 +4,7 @@
   pkgs,
   hostname,
   stateVersion,
+  pkgs-unstable,
   ...
 }:
 {
@@ -26,6 +27,7 @@
       inherit 
       pkgs
       inputs
+      pkgs-unstable
       ; 
     })
   ];

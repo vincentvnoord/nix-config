@@ -2,16 +2,18 @@
   description = "My system configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs = {
         nixpkgs.follows = "nixpkgs";
       };
     };
 
     stylix = {
-      url = "github:danth/stylix/release-25.05";
+      url = "github:danth/stylix/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -34,16 +36,28 @@
             permittedInsecurePackages = [ "dotnet-sdk-6.0.428" "dotnet-runtime-6.0.36" ];
         };
       };
-      homeStateVersion = "25.05";
+
+      pkgs-unstable = import inputs.nixpkgs-unstable {
+        system = system;
+        config = {
+          allowUnfree = true;
+          permittedInsecurePackages = [
+            "dotnet-sdk-6.0.428"
+            "dotnet-runtime-6.0.36"
+          ];
+        };
+      };
+
+      homeStateVersion = "26.05";
       user = "vincent";
       hosts = [
         {
           hostname = "desktop";
-          stateVersion = "25.05";
+          stateVersion = "26.05";
         }
         {
           hostname = "laptop";
-          stateVersion = "25.05";
+          stateVersion = "26.05";
         }
       ];
 
@@ -57,6 +71,7 @@
               stateVersion
               hostname
               user
+              pkgs-unstable
               ;
           };
 

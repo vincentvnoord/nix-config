@@ -3,7 +3,7 @@
   imports = [ inputs.stylix.homeModules.stylix ];
 
   home.packages = with pkgs; [
-    noto-fonts-emoji
+    noto-fonts-color-emoji
   ];
 
   stylix = {
@@ -11,7 +11,8 @@
       firefox.enable = true;
       kitty.enable = true;
       alacritty.enable = true;
-      tmux.enable = true;
+      tmux.enable = false;
+      gnome.enable = false;
 
       waybar.enable = false;
       hyprland.enable = false;
@@ -40,7 +41,7 @@
       };
       emoji = {
         name = "Noto Color Emoji";
-        package = pkgs.noto-fonts-emoji;
+        package = pkgs.noto-fonts-color-emoji;
       };
     };
 

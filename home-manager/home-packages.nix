@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, pkgs-unstable, ... }:
 {
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [ "dotnet-sdk-6.0.428" ];
@@ -15,6 +15,7 @@
 
     # Terminal
     alacritty
+    ghostty
     zsh
 
     grim
@@ -22,7 +23,7 @@
 
     # CLI tools
     git
-    neofetch
+    fastfetch
     ripgrep
     tmuxifier
     gcc
@@ -40,7 +41,7 @@
     php82Packages.composer
     docker
     glibc
-    code-cursor
+    pkgs-unstable.code-cursor
     air
     dbmate
     direnv
@@ -60,7 +61,7 @@
     # Linters
     stylua
     prettierd
-    nodePackages.eslint
+    eslint
 
     # GUI Tools
     drawio
@@ -84,7 +85,6 @@
 
     # .NET
     dotnet-sdk_8
-    dotnet-runtime_8
 
     gphoto2 
     ffmpeg 

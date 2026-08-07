@@ -5,6 +5,7 @@
   hostname,
   stateVersion,
   inputs,
+  pkgs-unstable,
   ...
 }:
 {
@@ -20,6 +21,7 @@
           hostname
           inputs
           stateVersion
+          pkgs-unstable
           ;
       })
     ];

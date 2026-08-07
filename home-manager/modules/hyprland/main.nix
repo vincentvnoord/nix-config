@@ -13,6 +13,7 @@ in
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
+    configType = "hyprlang";
 
     settings = {
       xwayland = {
@@ -193,7 +194,6 @@ in
 
       # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
       dwindle = {
-        pseudotile = true;
         preserve_split = true;
       };
 
@@ -223,11 +223,6 @@ in
         touchpad = {
           natural_scroll = false;
         };
-      };
-
-      # https://wiki.hyprland.org/Configuring/Variables/#gestures
-      gestures = {
-        workspace_swipe = false;
       };
 
       # Example per-device config
@@ -273,11 +268,10 @@ in
       # windowrulev2 = float,class:^(kitty)$,title:^(kitty)$
 
       # Ignore maximize requests from apps. You'll probably like this.
-      windowrulev2 = [
-        "suppressevent maximize, class:.*"
-        # Fix some dragging issues with XWayland
-        "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
-        "opacity 1.0 0.8,class:^(Alacritty)$"
+      windowrule = [
+        "match:class .*, suppress_event maximize"
+        "match:class ^$, match:title ^$, match:xwayland true, match:float true, match:fullscreen false, match:pin false, no_focus true"
+        "match:class ^(Alacritty)$, opacity 1.0 0.8"
       ];
 
     };
