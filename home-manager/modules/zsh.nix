@@ -23,6 +23,9 @@
       export GOPATH="$HOME/go"
       export PATH="$PATH:$GOPATH/bin"
 
+      export ANDROID_HOME="$HOME/Android/Sdk"
+      export PATH="$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools"
+
       export PATH="$PATH:/home/vincent/.dotnet/tools"
       export PKG_CONFIG_PATH="$(nix path-info -r nixpkgs#raylib)/lib/pkgconfig"
 

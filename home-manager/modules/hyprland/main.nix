@@ -34,7 +34,7 @@ in
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
         "XCURSOR_SIZE,36"
-        "QT_QPA_PLATFORM,wayland"
+        "QT_QPA_PLATFORM,xcb"
         "XCURSOR_SIZE,24"
         "HYPRCURSOR_SIZE,24"
         "GDK_SCALE,1"

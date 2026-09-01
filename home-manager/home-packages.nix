@@ -33,6 +33,9 @@
     cloc
     starship
     lsof
+    sqlc
+    claude-code
+    eas-cli
 
     # Programming tools
     nixfmt-rfc-style
@@ -72,6 +75,9 @@
     obs-studio
     vlc
     libreoffice
+    android-studio
+    android-tools
+    jdk17
 
     # Browsers
     firefox

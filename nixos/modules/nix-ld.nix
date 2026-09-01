@@ -2,13 +2,49 @@
 
 {
   programs.nix-ld = {
-    enable = true;             # turn it on
-    libraries = with pkgs; [   # list of extra dynamic libs to expose
+    enable = true;
+
+    libraries = with pkgs; [
       stdenv.cc.cc
       zlib
       openssl
       curl
-      # etc.
+
+      glib
+      nspr
+      nss
+      dbus
+      atk
+      cups
+      expat
+      libdrm
+      libxkbcommon
+      libxkbfile
+      mesa
+      vulkan-loader
+      pango
+      cairo
+      gtk3
+      alsa-lib
+      pulseaudio
+      libpng
+
+      fontconfig
+      freetype
+
+      libx11
+      libxcomposite
+      libxdamage
+      libxext
+      libxfixes
+      libxrandr
+      libxcb
+      libxi
+      libxinerama
+      libxcursor
+      libxrender
+      libxscrnsaver
+      libbsd
     ];
   };
 }
