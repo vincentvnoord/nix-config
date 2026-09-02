@@ -22,6 +22,7 @@
     slurp
 
     # CLI tools
+    stow
     git
     fastfetch
     ripgrep

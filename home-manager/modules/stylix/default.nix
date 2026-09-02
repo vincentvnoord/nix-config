@@ -1,6 +1,9 @@
 { inputs, pkgs, ... }:
 {
-  imports = [ inputs.stylix.homeModules.stylix ];
+  imports = [
+    inputs.stylix.homeModules.stylix
+    ./hyprland-colors.nix
+  ];
 
   home.packages = with pkgs; [
     noto-fonts-color-emoji
