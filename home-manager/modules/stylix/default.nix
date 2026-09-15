@@ -2,7 +2,7 @@
 {
   imports = [
     inputs.stylix.homeModules.stylix
-    ./hyprland-colors.nix
+    ./colors.nix
   ];
 
   home.packages = with pkgs; [

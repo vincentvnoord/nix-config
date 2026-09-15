@@ -37,9 +37,10 @@
     sqlc
     claude-code
     eas-cli
+    ngrok
 
     # Programming tools
-    nixfmt-rfc-style
+    nixfmt
     neovim
     php82
     php82Packages.composer
@@ -98,6 +99,14 @@
 
     wayland
     waybar
+    quickshell
+    (ags.override {
+      extraPackages = [
+        astal.hyprland
+        astal.tray
+        astal.wireplumber
+      ];
+    })
     xwayland
     swaybg
     hyprland
