@@ -8,7 +8,7 @@ let
 in
 {
   home.file = {
-    ".config/hypr/conf/colors.lua".text = ''
+    ".config/hypr/colors.lua".text = ''
       Colors = {
       ${lib.concatMapStringsSep "\n" (name:
         ''  ${name} = "rgba(${c.${name}}ff)",''
