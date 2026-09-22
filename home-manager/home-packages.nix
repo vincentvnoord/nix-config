@@ -12,6 +12,7 @@
     unzip
     apacheHttpd
     btop
+    quickemu
 
     # Terminal
     alacritty
@@ -20,6 +21,7 @@
 
     grim
     slurp
+    parted
 
     # CLI tools
     stow
@@ -38,6 +40,7 @@
     claude-code
     eas-cli
     ngrok
+    brightnessctl
 
     # Programming tools
     nixfmt
@@ -117,6 +120,7 @@
     vscode.fhs
     wl-clipboard
     hyprpaper
+    hyprlock
     pamixer
     spotify
     discord
