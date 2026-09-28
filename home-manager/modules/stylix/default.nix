@@ -34,8 +34,9 @@
         package = pkgs.nerd-fonts.fira-code;
       };
       sansSerif = {
-        name = "Inter";
-        package = pkgs.inter;
+        # Geist — NothingOS 5.0's system default sans, replacing Inter.
+        name = "Geist";
+        package = pkgs.geist-font;
       };
       serif = {
         # Use DejaVu Serif instead of Georgia

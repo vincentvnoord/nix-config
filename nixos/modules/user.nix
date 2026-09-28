@@ -7,7 +7,7 @@
     users.${user} = {
       isNormalUser = true;
       description = "Vincent van Noord";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "networkmanager" "wheel" "dialout" ];
     };
   };
 }
