@@ -1,11 +1,16 @@
 { config, lib, pkgs, ... }:
 
 {
+  programs.zsh.shellInit = ''
+    export LD_LIBRARY_PATH="${pkgs.stdenv.cc.cc.lib}/lib:$LD_LIBRARY_PATH"
+  '';
+
   programs.nix-ld = {
     enable = true;
 
     libraries = with pkgs; [
       stdenv.cc.cc
+      stdenv.cc.cc.lib
       zlib
       openssl
       curl
