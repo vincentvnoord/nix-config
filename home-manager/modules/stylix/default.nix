@@ -2,7 +2,6 @@
 {
   imports = [
     inputs.stylix.homeModules.stylix
-    ./colors.nix
   ];
 
   home.packages = with pkgs; [
