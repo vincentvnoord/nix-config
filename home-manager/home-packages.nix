@@ -41,6 +41,7 @@
     eas-cli
     ngrok
     brightnessctl
+    bun
 
     # Programming tools
     nixfmt
