@@ -42,6 +42,7 @@
     ngrok
     brightnessctl
     bun
+    tree-sitter
 
     # Programming tools
     nixfmt
