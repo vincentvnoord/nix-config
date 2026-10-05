@@ -23,4 +23,5 @@
   services.displayManager.sddm.enable = true;
 
   system.stateVersion = stateVersion;
+  services.fprintd.enable = true;
 }
