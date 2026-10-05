@@ -9,7 +9,6 @@
     ./user.nix
     ./nix.nix
     ./hyprland.nix
-    ./nvidia.nix
     ./home-manager.nix
     ./postgres.nix
     ./nix-ld.nix

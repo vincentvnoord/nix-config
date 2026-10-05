@@ -13,6 +13,7 @@
     apacheHttpd
     btop
     quickemu
+    popsicle
 
     # Terminal
     alacritty

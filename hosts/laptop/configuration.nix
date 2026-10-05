@@ -11,6 +11,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../nixos/modules
+    ../../nixos/modules/nvidia.nix
   ];
 
   networking.hostName = builtins.trace "DEBUG: Hostname is ${hostname}" hostname;

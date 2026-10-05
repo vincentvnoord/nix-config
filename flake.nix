@@ -19,7 +19,9 @@
 
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
-    };  
+    };
+
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs =
@@ -54,6 +56,10 @@
         }
         {
           hostname = "laptop";
+          stateVersion = "26.05";
+        }
+        {
+          hostname = "framework";
           stateVersion = "26.05";
         }
       ];

@@ -11,13 +11,15 @@
   imports = [
     ./hardware-configuration.nix
     ../../nixos/modules
-    ../../nixos/modules/nvidia.nix
+    inputs.nixos-hardware.nixosModules.framework-amd-ai-300-series
   ];
 
-  networking.hostName = builtins.trace "DEBUG: Hostname is ${hostname}" hostname;
+  networking.hostName = hostname;
+
+  # AMD graphics (no nvidia module imported for this host)
+  hardware.graphics.enable = true;
 
   services.xserver.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
   services.displayManager.sddm.enable = true;
 
   system.stateVersion = stateVersion;
