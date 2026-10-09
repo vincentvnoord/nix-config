@@ -4,6 +4,7 @@
   networking.networkmanager.enable = true;
   networking.firewall.allowedTCPPorts = [
     8081
+    8082
     8080
     3000 # Next dev server
     443

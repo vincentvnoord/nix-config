@@ -9,6 +9,7 @@
     ./user.nix
     ./nix.nix
     ./hyprland.nix
+    ./greetd.nix
     ./home-manager.nix
     ./postgres.nix
     ./nix-ld.nix

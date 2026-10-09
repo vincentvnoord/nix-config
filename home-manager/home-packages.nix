@@ -38,12 +38,13 @@
     starship
     lsof
     sqlc
-    claude-code
+    pkgs-unstable.claude-code
     eas-cli
     ngrok
     brightnessctl
     bun
     tree-sitter
+    gh
 
     # Programming tools
     nixfmt

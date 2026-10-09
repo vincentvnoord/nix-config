@@ -20,7 +20,9 @@
   hardware.graphics.enable = true;
 
   services.xserver.enable = true;
-  services.displayManager.sddm.enable = true;
+
+  services.logind.settings.Login.HandleLidSwitch = "suspend";
+  services.logind.settings.Login.HandleLidSwitchExternalPower = "suspend";
 
   system.stateVersion = stateVersion;
   services.fprintd.enable = true;

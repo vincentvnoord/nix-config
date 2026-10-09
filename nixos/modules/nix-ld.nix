@@ -26,6 +26,7 @@
       libxkbcommon
       libxkbfile
       mesa
+      libgbm
       vulkan-loader
       pango
       cairo
