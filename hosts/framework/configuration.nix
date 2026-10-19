@@ -18,6 +18,11 @@
 
   # AMD graphics (no nvidia module imported for this host)
   hardware.graphics.enable = true;
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings.General.Experimental = true;
+  };
 
   services.xserver.enable = true;
 

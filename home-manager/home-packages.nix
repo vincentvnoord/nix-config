@@ -45,6 +45,7 @@
     bun
     tree-sitter
     gh
+    stripe-cli
 
     # Programming tools
     nixfmt

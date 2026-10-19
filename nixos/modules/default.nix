@@ -14,5 +14,6 @@
     ./postgres.nix
     ./nix-ld.nix
     ./media.nix
+    ./strongswan.nix
   ];
 }
