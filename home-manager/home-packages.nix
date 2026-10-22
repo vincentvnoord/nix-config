@@ -46,6 +46,7 @@
     tree-sitter
     gh
     stripe-cli
+    vulnix
 
     # Programming tools
     nixfmt
